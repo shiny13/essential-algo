@@ -34,6 +34,31 @@ const graph = {
 
 ## BFS
 
+```
+function bfs(graph, start) {
+  const queue = [start]
+  const visited = new Set()
+  const result = []
+
+  while (queue.length) {
+    const vertex = queue.shift()
+
+    if (!visited.has(vertex)) {
+      visited.add(vertex)
+      result.push(vertex)
+
+      for (const neighbor of graph[vertex]) {
+        queue.push(neighbor)
+      }
+    }
+  }
+
+  return result
+}
+
+bfs(graph, 'A')
+```
+
 The BFS algorithm is implemented using a queue data structure, which holds the nodes that are to be processed in the order they were discovered.
 
 The visited set is used to keep track of the nodes that have already been visited, and the result array stores the order in which the nodes were visited.
@@ -43,6 +68,31 @@ We start by adding the start node to the queue and processing it. Then, we add i
 Finally, we return the result array, which contains the nodes in the order they were visited by the BFS algorithm.
 
 ## DFS
+
+```
+function dfs(graph, start) {
+  const stack = [start]
+  const visited = new Set()
+  const result = []
+
+  while (stack.length) {
+    const vertex = stack.pop()
+
+    if (!visited.has(vertex)) {
+      visited.add(vertex)
+      result.push(vertex)
+
+      for (const neighbor of graph[vertex]) {
+        stack.push(neighbor)
+      }
+    }
+  }
+
+  return result
+}
+
+dfs(graph, 'A')
+```
 
 The DFS algorithm is implemented using a stack data structure, which holds the nodes that are to be processed in the order they were discovered.
 
