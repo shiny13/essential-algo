@@ -42,5 +42,12 @@ We start by adding the start node to the queue and processing it. Then, we add i
 
 Finally, we return the result array, which contains the nodes in the order they were visited by the BFS algorithm.
 
+## DFS
 
+The DFS algorithm is implemented using a stack data structure, which holds the nodes that are to be processed in the order they were discovered.
 
+The visited set is used to keep track of the nodes that have already been visited, and the result array stores the order in which the nodes were visited. We start by adding the start node to the stack and processing it.
+
+Then, we add its neighbors to the stack and process them in the order they were added. We repeat this process until there are no more nodes to process. If we encounter a node that has already been visited, we simply skip it and continue to the next node.
+
+Finally, we return the result array, which contains the nodes in the order they were visited by the DFS algorithm
