@@ -1,4 +1,8 @@
 # essential-algo
+1. [BFS](#bfs)
+2. [DFS](#dfs)
+3. [Tree traversal algorithms](#tree-traversal-algorithms)
+
 Essential practice for algorithms and data structures
 
 The following graph is used for both BFS and DFS
